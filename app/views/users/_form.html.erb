@@ -1,10 +1,10 @@
 
-<%= form_with(:class => 'form1' ,model: user, local: true) do |form| %>
+<%= form_with(:class => 'form1 ' ,model: user, local: true) do |form| %>
 <h1 class='new_user'>Register</h1>
   <%=render 'shared/errors'%>
 
-  <div class="field">
-    <%= form.label :username %>
+  <div class="field ">
+    <%= form.label :username, :class =>"font-poppins" %>
     <%= form.text_field :username,:required => true %>
   </div>
 
