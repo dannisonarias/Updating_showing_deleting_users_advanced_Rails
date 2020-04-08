@@ -10,6 +10,14 @@
   </head>
 
   <body>
+  <nav class="nav justify-content-center">
+  <%=link_to "register new", new_user_path, :class =>"nav-link active"%>
+  <%if current_user %>
+    <%=link_to "#{current_user.username} sign_out" ,session_path(id: current_user.id),:class =>"nav-link active",:method => :DELETE %>
+  <%else%>
+    <%=link_to "sign_in", new_session_path, :class =>"nav-link active"%>
+   <%end%>
+  </nav>
     <%= yield %>
   </body>
 </html>

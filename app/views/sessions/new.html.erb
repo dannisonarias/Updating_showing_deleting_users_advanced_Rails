@@ -1,16 +1,10 @@
- <%= render 'shared/errors'%>
-<%= form_with(:class => 'form1' ,model: User, local: true ) do |form| %>
-<h1 class='new_user'>Register</h1>
-
-
+ <%= debug(params) if Rails.env.development? %>
+<%= render 'shared/errors'%>
+<%= form_with(url: sessions_path, method: "post",:class => 'form1') do |form| %>
+<h1 class='new_user'>Login</h1>
   <div class="field ">
     <%= form.label :username, :class =>"font-poppins" %>
     <%= form.text_field :username,:required => true %>
-  </div>
-
-  <div class="field">
-    <%= form.label :email %>
-    <%= form.text_field :email,:required => true %>
   </div>
 
   <div class="field">
@@ -19,11 +13,7 @@
   </div>
 
 
-    <%= form.submit 'Create',:class => 'btn btn-primary createbtn' %>
+    <%= form.submit 'login',:class => 'btn btn-primary createbtn' %>
 
   <%= link_to 'Back', users_path, :class => "btn btn-inverse" %>
 <% end %>
-
-
-
-

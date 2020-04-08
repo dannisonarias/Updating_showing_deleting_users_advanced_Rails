@@ -18,7 +18,7 @@
 
 .form1 {
     margin: 0 auto;
-    margin-top: 100px;
+    margin-top: 25px;
     padding: 20px;
     width: 400px;
     background-image: radial-gradient( circle 827px at 47.3% 48%,  rgba(255,255,255,1) 0%, rgba(138,192,216,1) 90% );
@@ -34,7 +34,13 @@
   }
   
   .createbtn{
-      margin: 20px 0;
+      margin: 10px 0;
       width:100%;
   }
  
+#error_explanation{
+  margin: 0 auto;
+}
+
+//  HEADER //
+
