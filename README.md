@@ -1,5 +1,5 @@
-# UI with models for users and posts.
-In this project,registered users can write confidential jokes/posts about non-members. Once registered and logged in, members can see who the author of a post is but, outside, they can only see the story and wonder who wrote it.
+# User interface(login/register/newpost) using ORM
+In this project,registered users can write confidential posts about non-members. Once registered are logged in, members can see who the author of a post is but, outside, they can only see the story and wonder who wrote it.
 This application has the data models and associations that allow users to submit links (“posts”). Using associations and foreign keys we're able to create links between tables that share information.
 
 # Install
