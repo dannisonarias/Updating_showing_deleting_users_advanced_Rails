@@ -10,7 +10,7 @@
     font-family: "Poppins", "Arial", "Helvetica Neue", sans-serif;
   }
 /* ==========================================================================
-   #FONT
+   #USER REGISTER/LOGIN FORM
    ========================================================================== */
 .new_user{
     text-align: center;
@@ -28,6 +28,8 @@
     box-shadow: 0px 9px 27px -6px rgba(0,0,0,0.75);
   }
 
+
+
   .field input{
       width: 100%;
       height: 25px;
@@ -42,5 +44,29 @@
   margin: 0 auto;
 }
 
-//  HEADER //
+//  POSTS  //
+.post_form {
+  margin: 0 auto;
+  margin-top: 25px;
+  padding: 20px;
+  width: 400px;
+  background: rgb(255,255,255);
+  background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(230,208,255,1) 100%);
+  height: 425px;
+  -webkit-box-shadow: 0px 9px 27px -6px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 9px 27px -6px rgba(0,0,0,0.75);
+  box-shadow: 0px 9px 27px -6px rgba(0,0,0,0.75);
+}
 
+.post_body{
+  height: 200px;
+}
+
+.post_body textarea{
+  height: 80%;
+  width: 100%;
+}
+
+.field_above{
+  display: block;
+}

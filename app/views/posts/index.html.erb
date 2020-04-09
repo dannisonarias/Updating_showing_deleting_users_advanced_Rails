@@ -1,0 +1,4 @@
+<% debug(@post) if Rails.env.development?%>
+<% console if Rails.env.development?%>
+<%= @post.title%>
+<%= @post.body %>
