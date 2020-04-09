@@ -1,24 +1,54 @@
-# README
+# UI with models for users and posts.
+In this project,registered users can write confidential jokes/posts about non-members. Once registered and logged in, members can see who the author of a post is but, outside, they can only see the story and wonder who wrote it.
+This application has the data models and associations that allow users to submit links (“posts”). Using associations and foreign keys we're able to create links between tables that share information.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Install
+1. Install 
 
-Things you may want to cover:
+> $ git clone <respositoryURL>
 
-* Ruby version
+2. Bundle install
 
-* System dependencies
+> $ bundle install
 
-* Configuration
+# Use
 
-* Database creation
+1. start the rails server
 
-* Database initialization
+> $ rails server
 
-* How to run the test suite
+2. Go to browser and visit 
 
-* Services (job queues, cache servers, search engines, etc.)
+> http://localhost:3000/
 
-* Deployment instructions
+## Built With
 
-* ...
+- Ruby on Rails
+- VSCode
+
+## Author
+
+👤 **Dannison Arias**
+
+- Github: [@dannisonarias](https://github.com/dannisonarias)
+- Twitter: [@AriasDannison](https://twitter.com/AriasDannison)
+- Linkedin: [Dannison Arias](https://www.linkedin.com/in/dannison-arias-777919190/)
+
+## 🤝 Contributing
+
+Contributions, issues and feature requests are welcome!
+
+Feel free to check the [issues page](issues/).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## Acknowledgments
+
+- Microverse
+- The Odin Project
+
+## 📝 License
+
+This project is [MIT](./license.md) licensed.

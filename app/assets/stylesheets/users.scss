@@ -10,6 +10,19 @@
     font-family: "Poppins", "Arial", "Helvetica Neue", sans-serif;
   }
 /* ==========================================================================
+   #NAV/HEADER
+   ========================================================================== */
+.nav{
+  position: sticky;
+  top: 0;
+  background-color: salmon;
+  z-index: 10;
+}
+.nav-link{
+  color: white !important;
+}
+
+/* ==========================================================================
    #USER REGISTER/LOGIN FORM
    ========================================================================== */
 .new_user{
@@ -69,4 +82,22 @@
 
 .field_above{
   display: block;
+}
+
+
+
+.title_post{
+  font-size: 15px;
+  font-weight: bold;
+  color:#a54040;
+}
+.author_info{
+  font-size: 10px;
+}
+.author_name{
+  color: rgb(70, 70, 161);
+}
+
+.date_posted{
+  font-size: 10px;
 }

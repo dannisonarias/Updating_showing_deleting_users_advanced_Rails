@@ -10,7 +10,9 @@
   </head>
 
   <body>
+    <%= debug(params) if Rails.env.development? %>
   <nav class="nav justify-content-center">
+  <%=link_to "Home", posts_path, :class =>"nav-link active"%>
   <%=link_to "Register new", new_user_path, :class =>"nav-link active"%>
   <%if current_user %>
     <%=link_to "#{current_user.username} Sign out" ,session_path(id: current_user.id),:class =>"nav-link active",:method => :DELETE %>
@@ -22,3 +24,4 @@
     <%= yield %>
   </body>
 </html>
+<% console if Rails.env.development?%>

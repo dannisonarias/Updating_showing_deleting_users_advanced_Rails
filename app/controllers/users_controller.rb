@@ -23,7 +23,7 @@ class UsersController < ApplicationController
       sign_in
       current_user
       flash[:success] = 'User saved successfully!'
-      redirect_to @user
+      redirect_to posts_path
     else
       flash[:warning] = "User can't be saved!"
       redirect_to new_user_path

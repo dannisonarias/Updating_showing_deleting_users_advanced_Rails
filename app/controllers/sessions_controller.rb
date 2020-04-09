@@ -1,13 +1,12 @@
 class SessionsController < ApplicationController
-  
   def new; end
 
   def create
     @user = User.find_by(username: user_params[:username])
     if @user&.authenticate(user_params[:password])
+      flash[:success] = 'logged in'
       sign_in
-      redirect_to users_path
-      flash[:success] = 'User saved successfully!'
+      redirect_to posts_path
     else
       flash[:warning] = 'Invalid email/password combination'
       redirect_to new_session_path
@@ -16,9 +15,11 @@ class SessionsController < ApplicationController
 
   def destroy
     log_out
-    redirect_to users_path
+    redirect_to posts_path
   end
+
   private
+
   def user_params
     params.permit(:username, :password)
   end
