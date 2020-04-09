@@ -6,8 +6,12 @@ class ApplicationController < ActionController::Base
   private
 
   def sign_in
+    renew_tokens
     # Remembers a user in the browser cookies for use in persistent sessions.
     cookies.permanent[:remember_token] = @user.remember_digest
+  end
+
+  def renew_tokens
     # Give the user a new remember token
     @user.remember
     # Save new token to the model

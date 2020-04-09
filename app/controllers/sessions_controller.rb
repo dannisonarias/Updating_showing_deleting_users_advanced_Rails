@@ -1,4 +1,5 @@
 class SessionsController < ApplicationController
+  
   def new; end
 
   def create
@@ -6,9 +7,10 @@ class SessionsController < ApplicationController
     if @user&.authenticate(user_params[:password])
       sign_in
       redirect_to users_path
+      flash[:success] = 'User saved successfully!'
     else
-      flash.now[:danger] = 'Invalid email/password combination'
-      render 'new'
+      flash[:warning] = 'Invalid email/password combination'
+      redirect_to new_session_path
     end
   end
 
@@ -16,7 +18,7 @@ class SessionsController < ApplicationController
     log_out
     redirect_to users_path
   end
-
+  private
   def user_params
     params.permit(:username, :password)
   end
