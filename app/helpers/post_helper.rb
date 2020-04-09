@@ -1,7 +1,8 @@
+# rubocop:disable Style/GuardClause
 module PostHelper
   # require user to be logged in for access
   def require_login
-    unless current_user
+    if current_user.nil?
       flash[:warning] = 'You must be logged in to access this section'
       redirect_to new_session_path # halts request cycle
     end
@@ -12,3 +13,4 @@ module PostHelper
     logged_in? ? post.user.username : 'hidden'
   end
 end
+# rubocop:enable Style/GuardClause
