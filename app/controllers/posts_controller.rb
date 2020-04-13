@@ -4,13 +4,15 @@ class PostsController < ApplicationController
   before_action :require_login, except: [:index]
 
   def index
-    @post = Post.all
+    # includes user to avoid n+1 problem in the view
+    @post = Post.all.includes(:user)
   end
 
   def create
     @post = Post.new(post_params)
     # assign the logged in users id to the post model
     @post.user_id = current_user.id
+    @post.author = current_user.username
     if @post.save
       flash[:success] = 'Content Successfully Created'
       redirect_to posts_path
