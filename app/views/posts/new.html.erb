@@ -1,0 +1,16 @@
+<% debug(@post) if Rails.env.development?%>
+<%= render 'shared/errors'%>
+<%=form_with model: @post,:class => 'post_form', local: true do |f| %>
+<h4 class =  "text-center">New post</h4>
+  <div class="field">
+    <%= f.label :title, :class =>"font-poppins" %>
+    <%= f.text_field :title,:required => true %>
+  </div>
+
+    <div class="post_body">
+      <%= f.label :body, :class =>"font-poppins field_above" %>
+      <%= f.text_area :body,:required => true %>
+    </div>
+     <%= f.submit 'Create Post',:class => 'btn btn-primary createbtn' %>
+       <%= link_to 'Back', posts_path, :class => "btn btn-inverse" %>
+<%end%>

@@ -1,0 +1,103 @@
+
+/* ==========================================================================
+   #FONT
+   ========================================================================== */
+   .font-robo {
+    font-family: "Roboto", "Arial", "Helvetica Neue", sans-serif;
+  }
+  
+  .font-poppins {
+    font-family: "Poppins", "Arial", "Helvetica Neue", sans-serif;
+  }
+/* ==========================================================================
+   #NAV/HEADER
+   ========================================================================== */
+.nav{
+  position: sticky;
+  top: 0;
+  background-color: salmon;
+  z-index: 10;
+}
+.nav-link{
+  color: white !important;
+}
+
+/* ==========================================================================
+   #USER REGISTER/LOGIN FORM
+   ========================================================================== */
+.new_user{
+    text-align: center;
+}
+
+.form1 {
+    margin: 0 auto;
+    margin-top: 25px;
+    padding: 20px;
+    width: 400px;
+    background-image: radial-gradient( circle 827px at 47.3% 48%,  rgba(255,255,255,1) 0%, rgba(138,192,216,1) 90% );
+    height: 400px;
+    -webkit-box-shadow: 0px 9px 27px -6px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 9px 27px -6px rgba(0,0,0,0.75);
+    box-shadow: 0px 9px 27px -6px rgba(0,0,0,0.75);
+  }
+
+
+
+  .field input{
+      width: 100%;
+      height: 25px;
+  }
+  
+  .createbtn{
+      margin: 10px 0;
+      width:100%;
+  }
+ 
+#error_explanation{
+  margin: 0 auto;
+}
+
+//  POSTS  //
+.post_form {
+  margin: 0 auto;
+  margin-top: 25px;
+  padding: 20px;
+  width: 400px;
+  background: rgb(255,255,255);
+  background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(230,208,255,1) 100%);
+  height: 425px;
+  -webkit-box-shadow: 0px 9px 27px -6px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 9px 27px -6px rgba(0,0,0,0.75);
+  box-shadow: 0px 9px 27px -6px rgba(0,0,0,0.75);
+}
+
+.post_body{
+  height: 200px;
+}
+
+.post_body textarea{
+  height: 80%;
+  width: 100%;
+}
+
+.field_above{
+  display: block;
+}
+
+
+
+.title_post{
+  font-size: 15px;
+  font-weight: bold;
+  color:#a54040;
+}
+.author_info{
+  font-size: 10px;
+}
+.author_name{
+  color: rgb(70, 70, 161);
+}
+
+.date_posted{
+  font-size: 10px;
+}
