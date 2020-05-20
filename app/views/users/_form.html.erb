@@ -1,0 +1,26 @@
+  <%=render 'shared/errors'%>
+<%= form_with(:class => 'form1 ' ,model: user, local: true) do |form| %>
+<h1 class='new_user'>Register</h1>
+
+
+  <div class="field ">
+    <%= form.label :username, :class =>"font-poppins" %>
+    <%= form.text_field :username,:required => true %>
+  </div>
+
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.text_field :email,:required => true %>
+  </div>
+
+  <div class="field">
+    <%= form.label :password %>
+    <%= form.password_field :password_digest,:required => true %>
+  </div>
+
+
+    <%= form.submit 'Create',:class => 'btn btn-primary createbtn' %>
+
+  <%= link_to 'Back', users_path, :class => "btn btn-inverse" %>
+<% end %>
+

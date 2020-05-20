@@ -1,0 +1,13 @@
+<%= render 'shared/errors'%>
+<div class='container main-cont'>
+    <%@post.each do |post|%>
+    <hr>
+    <div class='col-12'>
+        <h4 class = "title_post"><%= post.title%></h4>
+
+        <p class = "body"><%= post.body %></p>
+        <p class= "author_info d-inline-block" >author:<span class= "author_name"><%=show_author(post)%></span></p>
+        <span class = "date_posted">Posted at : <%=post.created_at%></span>
+    </div>
+    <%end%>
+</div>

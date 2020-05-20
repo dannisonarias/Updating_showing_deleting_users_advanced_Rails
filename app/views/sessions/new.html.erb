@@ -1,0 +1,18 @@
+<%= render 'shared/errors'%>
+<%= form_with(url: sessions_path, method: "post",:class => 'form1') do |form| %>
+<h1 class='new_user'>Login</h1>
+  <div class="field ">
+    <%= form.label :username, :class =>"font-poppins" %>
+    <%= form.text_field :username,:required => true %>
+  </div>
+
+  <div class="field">
+    <%= form.label :password %>
+    <%= form.password_field :password,:required => true %>
+  </div>
+
+
+    <%= form.submit 'login',:class => 'btn btn-primary createbtn' %>
+
+  <%= link_to 'Back', posts_path, :class => "btn btn-inverse" %>
+<% end %>
